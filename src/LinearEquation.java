@@ -1,5 +1,6 @@
 import java.text.DecimalFormat;
 import java.math.RoundingMode;
+
 public class LinearEquation {
             //Variables about first point
     private String x1ValueBeforeParse;
