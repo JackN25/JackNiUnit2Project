@@ -66,18 +66,20 @@ public class LinearEquation {
 
 
     public String toString() {
-        DecimalFormat df = new DecimalFormat("#.00");
+        DecimalFormat df = new DecimalFormat("0.00");
         df.setRoundingMode(RoundingMode.HALF_UP);
 
         return "First pair: (" + x1Value + "," + y1Value + ")\n" +
                 "Second pair: (" + x2Value + "," + y2Value + ")\n" +
-                "Slope of line: " + slope +"\n" +
-                "Y-intercept: " + yIntercept + "\n" +
-                "Slope intercept form: y= " + yDistance + "/" + xDistance + " + " + yIntercept + "\n" +
+                "Slope of line: " + df.format(slope) +"\n" +
+                "Y-intercept: " + df.format(yIntercept) + "\n" +
+                "Slope intercept form: y= " + df.format(yDistance) + "/" + df.format(xDistance) + " + " + df.format(yIntercept) + "\n" +
                 "Distance between two points: " + df.format(distance) + "\n";
     }
 
     public String printThirdPointInfo() {
-        return "(" + x3Value + "," + y3Value + ")";
+        DecimalFormat df = new DecimalFormat("0.00");
+        df.setRoundingMode(RoundingMode.HALF_UP);
+        return "(" + df.format(x3Value) + "," + df.format(y3Value) + ")";
     }
 }
